@@ -128,7 +128,8 @@ module.exports = function(passport) {
 passport.use(new FacebookStrategy({
     clientID        : configAuth.facebookAuth.clientID,
     clientSecret    : configAuth.facebookAuth.clientSecret,
-    callbackURL     : configAuth.facebookAuth.callbackURL
+    callbackURL     : configAuth.facebookAuth.callbackURL,
+    profileFields: ['id', 'name','picture.type(large)', 'emails', 'displayName', 'about', 'gender'],
   },
   function(accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
@@ -141,7 +142,7 @@ passport.use(new FacebookStrategy({
           {
             console.log("There is no such user, adding now");
             console.log(profile);
-            connection.query("INSERT into user_info(user_id,user_name) VALUES('"+profile.id+"','"+profile.first_name+"')");
+            connection.query("INSERT into user_info(user_id,user_name) VALUES('"+profile.id+"','"+profile.displayName+"')");
           }
           else
             {

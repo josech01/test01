@@ -77,11 +77,18 @@ module.exports = function(app, passport) {
     //         failureRedirect : '/'
     //     }));
 
-	app.get('/auth/facebook', passport.authenticate('facebook'));
+	app.get('/auth/facebook',
+		passport.authenticate('facebook', {
+	  display: 'popup'
+      //scope: [ 'email', 'basic_info', 'user_photos'],
+      //profileFields: ['id', 'displayName', 'photos', 'emails', 'birthday'],
+      //failureRedirect: '/login'
+	}));
 
 	// handle the callback after twitter has authenticated the user
 	app.get('/auth/facebook/callback',
 		passport.authenticate('facebook', {
+			display: 'popup',
 			successRedirect : '/profile',
 			failureRedirect : '/'
 		}));

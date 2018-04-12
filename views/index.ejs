@@ -1,15 +1,16 @@
+
 <!-- views/index.ejs -->
 <!doctype html>
 <html>
 <head>
-	<title>Node Authentication</title>
+  <title>Node Authentication</title>
     
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-	<style>
-		body 		{ padding-top:80px; }
-	</style>
+  <style>
+    body    { padding-top:80px; }
+  </style>
 </head>
 <body>
     <div class="container">
@@ -25,22 +26,4 @@
         </div>
     </div>
 </body>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '882410838586064',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.12'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 </html>

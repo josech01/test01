@@ -6,7 +6,7 @@ module.exports = {
         'callbackURL'   : 'https://ac49e9bb.ngrok.io/auth/facebook/callback',
         // 'callbackURL'   : 'http://localhost:3000/auth/facebook/callback',
         'profileURL'    : 'https://graph.facebook.com/v2.5/me?fields=first_name,last_name,email',
-        'profileFields' : ['id', 'email', 'name'] // For requesting permissions from Facebook API
+        'profileFields': ['id', 'name', 'displayName', 'username', 'photos', 'hometown', 'profileUrl', 'friends'] // For requesting permissions from Facebook API
     },
 
     'twitterAuth' : {
